@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: website
-          image: html-auto-deployment:v1
+         image: ghcr.io/habeebunissa22-sketch/html-auto-deployment:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
