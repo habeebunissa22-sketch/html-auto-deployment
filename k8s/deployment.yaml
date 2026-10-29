@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: website
-         image: ghcr.io/habeebunissa22-sketch/html-auto-deployment:latest
-          imagePullPolicy: IfNotPresent
+          image: ghcr.io/habeebunissa22-sketch/html-auto-deployment:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
