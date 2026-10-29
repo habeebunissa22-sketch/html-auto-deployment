@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: html-auto-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: html-auto-deployment
+  template:
+    metadata:
+      labels:
+        app: html-auto-deployment
+    spec:
+      containers:
+        - name: website
+          image: html-auto-deployment:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
